@@ -1,18 +1,50 @@
 <template>
 <div class="container">
-  <img alt="Vue logo" src="./assets/logo.png">
-  </div>
+<Header title="Task Tracker"/>  
+<Tasks :tasks="tasks"/>
+</div>
 </template>
 
 <script>
+import Header from "./components/Header"
+import Tasks from "./components/Tasks"
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Tasks
+  },
+  data() {
+    return{
+      tasks: []
+    }
+  },
+  created(){
+    this.tasks=[
+      {
+        id:1,
+        text:"Do stuff",
+        day: "Today",
+        reminder:true
+      },
+      {
+        id:2,
+        text:"Do stuff",
+        day: "Today",
+        reminder:true
+      },
+      {
+        id:3,
+        text:"Do stuff",
+        day: "Today",
+        reminder:true
+      }
+    ]
   }
 }
 </script>
+
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
