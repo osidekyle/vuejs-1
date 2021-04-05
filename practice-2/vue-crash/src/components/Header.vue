@@ -11,8 +11,7 @@ import Button from "./Button"
 export default{
     name:"Header",
     props:{
-        title:String,
-        default:"Hello World"
+        title:String
     },
     components:{
         Button
